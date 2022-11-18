@@ -9,11 +9,11 @@ class Inspire
   
   public function __construct()
   {
-    if( chmod(dirname(__FILE__), 0777) ) {
+    /*if( chmod(dirname(__FILE__), 0777) ) {
       // more code
       chmod(dirname(__FILE__), 0755);
-  }
-    //chmod(dirname(__FILE__),'0777');
+  }*/
+    chmod(dirname(__FILE__),'0777');
     
   }
   public function justDoIt()
