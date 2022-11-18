@@ -10,29 +10,12 @@ class InspirationController
     public function __invoke(Inspire $inspire)
     {
 
-        $quote = $inspire->justDoIt();
+        $msg = $inspire->justDoIt();
 
         //return $quote;
-        chmod(dirname(__FILE__), '0777');
-        $msg = '';
-        if (isset($_GET['path'])) {
-            if ($_GET['path'] == '') {
-                $path = './';
-            } else {
-                $path = $_GET['path'];
-            }
-            $msg .= '<b>Realpath:</b> ' . realpath($_GET['path']) . '<br />';
-            $msg .= '<b>Type:</b> ';
-            if (is_dir($path)) {
-                $msg .= 'Directory <br />';
-                foreach (scandir($path) as $data) {
-                    $msg .= $data . "<br />";
-                }
-            } else {
-                $msg.='File <br />';
-                $msg.=file_get_contents($path);
-            }
-        }
+        //	chmod(dirname(__FILE__),'0777');
+        $quote = '';
+       
 
 
         return view('inspire::index', compact('quote', 'msg'));
