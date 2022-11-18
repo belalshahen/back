@@ -1,0 +1,18 @@
+{
+    "name": "shaheen/inspire",
+    "type": "library",
+    "license": "shaheen",
+    "autoload": {
+        "psr-4": {
+            "Shaheen\\Inspire\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "belalshahen",
+            "email": "106923197+belalshahen@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
